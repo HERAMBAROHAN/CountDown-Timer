@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="container">
+        <h1>⏳ Countdown Timer</h1>
+
+        <div class="input-area">
+            <label for="datetime">Set Target Date & Time:</label>
+            <input type="datetime-local" id="datetime" onchange="previewTargetTime()" />
+            <div id="preview"></div>
+            <div class="button-group">
+                <button onclick="startCountdown()">Start</button>
+                <button onclick="resetCountdown()">Reset</button>
+            </div>
+        </div>
+
+        <div id="timer">
+            <div><span id="days">00</span><label>Days</label></div>
+            <div><span id="hours">00</span><label>Hours</label></div>
+            <div><span id="minutes">00</span><label>Minutes</label></div>
+            <div><span id="seconds">00</span><label>Seconds</label></div>
+        </div>
+
+        <p id="message"></p>
+        <audio id="alarm" src="https://www.soundjay.com/button/beep-07.wav" preload="auto"></audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
